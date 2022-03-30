@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // var t10, t2, v10, v2, v20, v1, v10, mu4, mu5, mu6, m1, m2, r, e;
+        // //数据输入开始
+
+        // m1 = prompt('请输入m1(质量大的为m1)', 199.98);
+        // m2 = prompt('请输入m2', 199.88);
+        // t10 = prompt('输入t10', parseFloat(843.29));
+        // t2 = prompt('输入t2', 414.09);
+        // //数据输入结束
+        // m1 = Number(m1);
+        // m2 = Number(m2);
+        // t10 = Number(t10);
+        // t2 = Number(t2);
+        // // 完全弹性碰撞
+        // alert('完全碰撞的被撞物块初速度是0');
+        // v10 = 1 / t10;
+        // mu4 = 1 / t2;
+        // mu5 = (1 * m1) / t10;
+        // mu6 = (1 * m2) / t2;
+        // v1 = ((m2 - m1) / (m1 + m2)) * v10;
+        // v2 = ((m1 * 2) / (m1 + m2)) * v10;
+        // v20 = 0;
+        // e1 = (v2 - v1) / v10;
+        // r1 = (m1 + (m2 * e1 * e1)) / (m1 + m2);
+        // e2 = (((m2 * v2) - (m1 * v1)) / (m1 * v1)) * 100;//这个是E%
+
+
+        // alert('第三个数据是' + v10 + '第四个数据是' + mu4 + '第五个数据是' + mu5 + '第六个数据是' + mu6 + 'e是' + e1 + 'R是' + r + 'E%是' + e2 + '%');
+        // console.log('第三个数据是' + v10 + '\n', '第四个数据是' + mu4 + '\n', '第五个数据是' + mu5 + '\n', '第六个数据是' + mu6 + '\n', 'e是' + parseFloat(e1) + '\n', 'R是' + parseFloat(r1) + '\n', 'E%是' + parseFloat(e2) + '%')
+        function button() {
+            alert('第三个数据是');
+        }
+        function button2() {
+            var m1 = document.getElementById('m1').value;
+            var m2 = document.getElementById('m2').value;
+            var t10 = document.getElementById('t10').value;
+            var t2 = document.getElementById('t2').value;
+            //定义所有变量
+            var t10, t2, v10, v2, v20, v1, v10, mu4, mu5, mu6, m1, m2, r, e;
+            //数据输入开始
+
+            // m1 = prompt('请输入m1(质量大的为m1)', 199.98);
+            // m2 = prompt('请输入m2', 199.88);
+            // t10 = prompt('输入t10', parseFloat(843.29));
+            // t2 = prompt('输入t2', 414.09);
+            //数据输入结束
+            m1 = Number(m1);
+            m2 = Number(m2);
+            t10 = Number(t10);
+            t2 = Number(t2);
+            // 完全弹性碰撞
+            alert('完全碰撞的被撞物块初速度是0');
+            v10 = 1 / t10;
+            mu4 = 1 / t2;
+            mu5 = (1 * m1) / t10;
+            mu6 = (1 * m2) / t2;
+            v1 = ((m2 - m1) / (m1 + m2)) * v10;
+            v2 = ((m1 * 2) / (m1 + m2)) * v10;
+            v20 = 0;
+            e1 = (v2 - v1) / v10;
+            r1 = (m1 + (m2 * e1 * e1)) / (m1 + m2);
+            e2 = (((m2 * v2) - (m1 * v1)) / (m1 * v1)) * 100;//这个是E%
+
+            console.log('第三个数据是' + v10 + '\n', '第四个数据是' + mu4 + '\n', '第五个数据是' + mu5 + '\n', '第六个数据是' + mu6 + '\n', 'e是' + parseFloat(e1) + '\n', 'R是' + parseFloat(r1) + '\n', 'E%是' + parseFloat(e2) + '%');
+
+            document.getElementById("pri1").innerHTML = 'm1是' + m1 + '<br>' + 'm2是' + m2 + '<br>' + '<br>' + '<br>' + 't10是' + t10 + '<br>' + 't2是' + t2 + '<br>' + '第三个数据是' + v10 + '<br>' + '第四个数据是' + mu4 + '<br>' + '第五个数据是' + mu5 + '<br>' + '第六个数据是' + mu6 + '<br>' + 'e是' + parseFloat(e1) + '<br>' + 'R是' + parseFloat(r1) + '<br>' + 'E是' + parseFloat(e2) + '%';
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="prompt">
+
+        <input type="text" id="m1" value="" placeholder="m1">
+        <input type="text" id="m2" value="" placeholder="m2">
+        <input type="text" id="t10" value="" placeholder="输入t10">
+        <input type="text" id="t2" value="" placeholder="输入t2">
+        <button onclick="button2()">计算</button>
+
+    </div>
+
+    <div id="pri1">
+
+    </div>
+</body>
+
+</html>
