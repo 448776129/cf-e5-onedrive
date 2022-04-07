@@ -1,102 +1,146 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        input {
-            display: block;
-            margin-top: 20px;
-        }
-    </style>
-    <script>
-        // var t10, t2, v10, v2, v20, v1, v10, mu4, mu5, mu6, m1, m2, r, e;
-        // //数据输入开始
-
-        // m1 = prompt('请输入m1(质量大的为m1)', 199.98);
-        // m2 = prompt('请输入m2', 199.88);
-        // t10 = prompt('输入t10', parseFloat(843.29));
-        // t2 = prompt('输入t2', 414.09);
-        // //数据输入结束
-        // m1 = Number(m1);
-        // m2 = Number(m2);
-        // t10 = Number(t10);
-        // t2 = Number(t2);
-        // // 完全弹性碰撞
-        // alert('完全碰撞的被撞物块初速度是0');
-        // v10 = 1 / t10;
-        // mu4 = 1 / t2;
-        // mu5 = (1 * m1) / t10;
-        // mu6 = (1 * m2) / t2;
-        // v1 = ((m2 - m1) / (m1 + m2)) * v10;
-        // v2 = ((m1 * 2) / (m1 + m2)) * v10;
-        // v20 = 0;
-        // e1 = (v2 - v1) / v10;
-        // r1 = (m1 + (m2 * e1 * e1)) / (m1 + m2);
-        // e2 = (((m2 * v2) - (m1 * v1)) / (m1 * v1)) * 100;//这个是E%
-
-
-        // alert('第三个数据是' + v10 + '第四个数据是' + mu4 + '第五个数据是' + mu5 + '第六个数据是' + mu6 + 'e是' + e1 + 'R是' + r + 'E%是' + e2 + '%');
-        // console.log('第三个数据是' + v10 + '\n', '第四个数据是' + mu4 + '\n', '第五个数据是' + mu5 + '\n', '第六个数据是' + mu6 + '\n', 'e是' + parseFloat(e1) + '\n', 'R是' + parseFloat(r1) + '\n', 'E%是' + parseFloat(e2) + '%')
-        function button() {
-            alert('第三个数据是');
-        }
-        function button2() {
-            var m1 = document.getElementById('m1').value;
-            var m2 = document.getElementById('m2').value;
-            var t10 = document.getElementById('t10').value;
-            var t2 = document.getElementById('t2').value;
-            //定义所有变量
-            var t10, t2, v10, v2, v20, v1, v10, mu4, mu5, mu6, m1, m2, r, e;
-            //数据输入开始
-
-            // m1 = prompt('请输入m1(质量大的为m1)', 199.98);
-            // m2 = prompt('请输入m2', 199.88);
-            // t10 = prompt('输入t10', parseFloat(843.29));
-            // t2 = prompt('输入t2', 414.09);
-            //数据输入结束
-            m1 = Number(m1);
-            m2 = Number(m2);
-            t10 = Number(t10);
-            t2 = Number(t2);
-            // 完全弹性碰撞
-            alert('完全碰撞的被撞物块初速度是0');
-            v10 = 1 / t10;
-            mu4 = 1 / t2;
-            mu5 = (1 * m1) / t10;
-            mu6 = (1 * m2) / t2;
-            v1 = ((m2 - m1) / (m1 + m2)) * v10;
-            v2 = ((m1 * 2) / (m1 + m2)) * v10;
-            v20 = 0;
-            e1 = (v2 - v1) / v10;
-            r1 = (m1 + (m2 * e1 * e1)) / (m1 + m2);
-            e2 = (((m2 * v2) - (m1 * v1)) / (m1 * v1)) * 100;//这个是E%
-
-            console.log('第三个数据是' + v10 + '\n', '第四个数据是' + mu4 + '\n', '第五个数据是' + mu5 + '\n', '第六个数据是' + mu6 + '\n', 'e是' + parseFloat(e1) + '\n', 'R是' + parseFloat(r1) + '\n', 'E%是' + parseFloat(e2) + '%');
-
-            document.getElementById("pri1").innerHTML = 'm1是' + m1 + '<br>' + 'm2是' + m2 + '<br>' + '<br>' + '<br>' + 't10是' + t10 + '<br>' + 't2是' + t2 + '<br>' + '第三个数据是' + v10 + '<br>' + '第四个数据是' + mu4 + '<br>' + '第五个数据是' + mu5 + '<br>' + '第六个数据是' + mu6 + '<br>' + 'e是' + parseFloat(e1) + '<br>' + 'R是' + parseFloat(r1) + '<br>' + 'E是' + parseFloat(e2) + '%';
-        }
-
-    </script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+	<title>Diatecian</title>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/app.js"></script>
+	<!-- 字体图标文件 -->
+	<link href="one.css" rel="stylesheet" type="text/css">
+	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="fonts/iconmoon.css" rel="stylesheet" type="text/css">
+	<!-- 主css文件-->
+	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div id="prompt">
 
-        <input type="text" id="m1" value="" placeholder="m1">
-        <input type="text" id="m2" value="" placeholder="m2">
-        <input type="text" id="t10" value="" placeholder="输入t10">
-        <input type="text" id="t2" value="" placeholder="输入t2">
-        <button onclick="button2()">计算</button>
+<body class="homepage">
 
-    </div>
+	<div id="site-content">
+		<header class="site-header">
+			<div class="container">
+				<a href="index.html" id="branding" class="pull-left">
+					<i class="icon-cupcake logo"></i>
+					<h1 class="site-title">Name Surname</h1>
+				</a>
+				<!-- Default snippet for navigation -->
+				<div class="main-navigation pull-right">
+					<ul class="menu">
+						<li class="menu-item"><a href="dq.html">大气资源保护</a></li>
+						<li class="menu-item"><a href="hy.html">海洋资源保护</a></li>
+						<li class="menu-item"><a href="td.html">土地资源保护</a></li>
+						<li class="menu-item"><a href="sw.html">森林资源保护</a></li>
+						<li class="menu-item"><a href="sl.html">生物资源保护</a></li>
+						<li class="menu-item"><a href="rw.html">人文遗迹保护</a></li>
 
-    <div id="pri1">
+					</ul> <!-- .menu -->
+				</div> <!-- .main-navigation -->
 
-    </div>
+				<div class="mobile-navigation"></div>
+			</div>
+		</header> <!-- .site-header -->
+
+		<div class="hero">
+			<div class="container">
+
+				<h1 class="site-title">环境保护</h1>
+				<small class="site-description">保护环境，我们一起行动</small>
+			</div>
+		</div>
+
+		<main class="main-content">
+			<div class="fullwidth-block cooking-section category-block">
+				<div class="container">
+					<figure><img src="dummy/1.jpeg" alt="cooking"></figure>
+					<div class="category-content">
+						<h1 class="category-title">保护大气资源，让蓝天白云永驻世界</h1>
+						<p>“低碳生活”(low-carbonlife)，就是指生活作息时所耗用的能量要尽力减少，从而减低碳，特别是二氧化碳的排放量，从而减少对大气的污染，减缓生态恶化，主要是从节电节气和回收三个环节来改变生活细节。
+						</p>
+						<a href="dq.html" class="button">Read more</a>
+					</div> <!-- .category-content -->
+				</div>
+			</div> <!-- .cooking-section -->
+			<div class="fullwidth-block restaurant-section category-block">
+				<div class="container">
+					<figure><img src="dummy/2.jpeg" alt="restaurant"></figure>
+					<div class="category-content">
+						<h1 class="category-title">保护海洋资源，让孕育生命的摇篮永远清澈</h1>
+						<p>生活在地球上的我们，是愿意享受被温柔包围的力量，还是整日惶恐惊措的预见末日?保护海洋，只有从“我”做起，才能让我们赖以生存的世界变得完整而美丽，保护碧海蓝天，共建绿色家园
+							保护赖以生存的海洋环境需要我们人类的节制和努力。
+						</p>
+						<a href="hy.html" class="button">Read more</a>
+					</div> <!-- .category-content -->
+				</div>
+			</div> <!-- .restaurant-section -->
+			<div class="fullwidth-block fruits-section category-block">
+				<div class="container">
+					<figure><img src="dummy/3.jpeg" alt="fruits"></figure>
+					<div class="category-content">
+						<h1 class="category-title">保护土地资源，就是保护我们的饭碗，保护我们的生命。</h1>
+						<p>坚守耕地红线 建设美好家园万物土中生，寸土如寸金节约土地资源
+							造福子孙后代节约用地牢记心，保护土地在于一点一滴珍惜资源在于一朝一夕家中有粮，心中不慌，守住土地，就有粮仓！土地资源是块宝，子孙万代离不了农田保护身体力行
+							粮食安全警钟长鸣珍爱土地有你有我 </p>
+						<a href="td.html" class="button">Read more</a>
+					</div> <!-- .category-content -->
+				</div>
+			</div> <!-- .fruits-section -->
+			<div class="fullwidth-block vegetables-section category-block">
+				<div class="container">
+					<figure><img src="dummy/4.jpeg" alt="vegetables"></figure>
+					<div class="category-content">
+						<h1 class="category-title">保护森林资源，地球是我的家，绿化取决于每个人。</h1>
+						<p>鸟语花香，因为有绿树作屏障；空气清新，因为有森林作过滤；土地肥沃，因为有森林作安保；氧气充足，因为有森林作供应。世界森林日，让我们携起手来，一起保护森林，坚决对滥砍滥伐行为说不！</p>
+						<a href="sl.html" class="button">Read more</a>
+					</div> <!-- .category-content -->
+				</div>
+			</div> <!-- .vegetables-section -->
+			<div class="fullwidth-block  vegetables-section vegetables-section2 category-block">
+				<div class="container">
+					<figure><img src="dummy/5.jpg" alt="vegetables"></figure>
+					<div class="category-content">
+						<h1 class="category-title">保护生物资源，人类尊重自然、尊重生物是人类珍爱自己生命的需要</h1>
+						<p>我们的周围有美丽的树木，芬芳的花朵，飞翔的小鸟，欢叫的青蛙，畅游的鱼儿……它们让我们感觉到这个世界多美好，大自然赐予了我们一切，可是我们却又为何去破坏大自然呢？</p>
+						<a href="sw.html" class="button">Read more</a>
+					</div> <!-- .category-content -->
+				</div>
+			</div> <!-- .vegetables-section -->
+			<div class="fullwidth-block vegetables-section vegetables-section3 category-block">
+				<div class="container">
+					<figure><img src="dummy/6.jpeg" alt="vegetables"></figure>
+					<div class="category-content">
+						<h1 class="category-title">保护人文遗迹资源，让留住人间的美好一直延续</h1>
+						<p>青海湖的颜色分三层。离岸边较近的哪一层是清澈见底可以看见湖底的水蓝色，细细的看，有感觉这水是无色的，好像是一块透明的水晶，强烈的阳光给湖面增添了一丝光滑。中间的那层颜色是浅绿色的，可以看见海草在湖水里面晃动。
+						</p>
+						<a href="rw.html" class="button">Read more</a>
+					</div> <!-- .category-content -->
+				</div>
+			</div> <!-- .vegetables-section -->
+
+		</main> <!-- .main-content -->
+
+		<footer class="site-footer">
+			<div class="container">
+				<nav class="footer-navigation">
+					<a href="dq.html">大气资源保护</a>
+					<a href="hy.html">海洋资源保护</a>
+					<a href="td.html">土地资源保护</a>
+					<a href="sl.html">森林资源保护</a>
+					<a href="sw.html">生物资源保护</a>
+					<a href="rw.html">人文遗迹保护</a>
+				</nav>
+				<div class="colophon">
+					<p>Copyright 2022 All right reserved</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+
 </body>
 
 </html>
