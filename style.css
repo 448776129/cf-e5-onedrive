@@ -1,0 +1,267 @@
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  background-color: #f2efdc;
+  color: #898670;
+}
+
+a {
+  text-decoration: none;
+  color: #f16a54;
+  font-weight: 400;
+}
+
+
+p {
+  margin-top: 0;
+}
+
+/* Reusable Components Style */
+.button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 500;
+  color: white;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+
+
+/* Header Styles */
+.site-header {
+  text-align: center;
+  background: rgb(203, 235, 197);
+}
+
+.homepage .site-header .main-navigation {
+  float: none;
+  margin: 0 auto;
+}
+.site-header .main-navigation .menu {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+
+.site-header .main-navigation .menu-item {
+  display: inline-block;
+  padding: 30px 0;
+  margin: 0;
+}
+
+.site-header .main-navigation .menu-item a {
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 1;
+  color: #9d9879;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  border-right: 1px solid #9d9879;
+}
+
+.homepage #branding {
+  display: none;
+}
+
+.mobile-navigation {
+  clear: both;
+  display: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 0;
+}
+
+.hero .logo {
+  font-size: 60px;
+  font-size: 3.75rem;
+  color: #f16a54;
+}
+
+.hero .site-title {
+  font-size: 60px;
+  font-size: 3.75rem;
+  color: #736f5c;
+  font-weight: 300;
+  position: relative;
+  padding: 30px 0;
+}
+
+.hero .site-title:before,
+.hero .site-title:after {
+  content: " ";
+  width: 40px;
+  height: 5px;
+  background-color: #e2dfce;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.hero .site-description {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #9d9879;
+}
+
+.category-block {
+  padding: 100px 0;
+  *zoom: 1;
+}
+
+.category-block:after {
+  content: " ";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+.category-block figure {
+  width: 370px;
+  text-align: center;
+  float: left;
+  margin-right: 130px;
+}
+
+
+.category-block figure img {
+  max-width: 100%;
+}
+
+.category-block .category-content {
+  overflow: hidden;
+}
+
+.category-block .category-title {
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.category-block p {
+  margin-bottom: 30px;
+}
+
+.cooking-section {
+  background-color: #d1d3d2;
+  color: #c09ead;
+}
+
+.cooking-section .category-title {
+  color: #fbab18;
+}
+
+/* 按钮 */
+.restaurant-section {
+  background-color: #efcc8c;
+  color: #96591d;
+}
+
+
+
+.restaurant-section .button,
+.fruits-section .button,
+.vegetables-section .button,
+.cooking-section .button {
+  background-color: #48172d;
+  color: #fbab18;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.fruits-section {
+  color: #898670;
+}
+
+
+.vegetables-section {
+  background-color: #879c29;
+  color: #f2efdc;
+}
+
+
+
+.author-bio {
+  padding: 100px 0;
+}
+
+.author-bio figure.profile-picture {
+  border: 10px solid white;
+  margin-bottom: 30px;
+}
+
+.author-bio figure.profile-picture img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.author-bio h2 {
+  font-weight: 100;
+  font-size: 48px;
+  font-size: 3rem;
+  margin: 0 0 30px;
+  line-height: 1;
+  color: #736f5c;
+}
+
+.content {
+  padding: 100px 0;
+}
+
+.content .entry-title {
+  font-weight: 300;
+  font-size: 48px;
+  font-size: 3rem;
+  color: #736f5c;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid #e1dece;
+  margin: 50px 0;
+}
+
+/* 底部样式 */
+.site-footer {
+  text-align: center;
+  padding: 50px 0;
+  background-color: rgb(203, 235, 197);
+  color: #9d9879;
+}
+
+.site-footer .footer-navigation a {
+  display: inline-block;
+  padding: 0 20px;
+  color: #9d9879;
+  font-weight: 400;
+  border-right: 1px solid #9d9879;
+  font-size: 14px;
+  font-size: 0.875rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.vegetables-section2 {
+  background-color: #736f5c;
+}
+
+.vegetables-section3 {
+  background-color: #b1bcd0;
+}
